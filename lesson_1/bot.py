@@ -23,15 +23,14 @@ bot = Bot(token=token)
 dp = Dispatcher()
 
 """
-@dp.message - хендлер (обработчик сообщений)
-
+@dp.message - хендлер (обработчик(перехватчик) сообщений)
 
 """
 
 
 @dp.message(CommandStart()) 
 # /start == сообщению который отправил пользователь
-# if True:
+# if message.text == '/start: # True
     # start()
 # else:
     # pass
