@@ -38,11 +38,16 @@ async def start(message: types.Message):
     await message.answer("Привет")
 
 @dp.message(Command('help'))
+# /help == сообщению который отправил пользователь
+# if message.text == '/help: # True
+    # help_comm()
+# else:
+    # pass
 async def help_comm(message: types.Message):
     await message.reply('Чем могу помочь?')
 
 @dp.message(Command('play'))
-async def help_comm(message: types.Message):
+async def play_comm(message: types.Message):
     await message.answer_photo('https://media.makeameme.org/created/you-win-nothing-b744e1771f.jpg', caption="Вы выиграли")
 
 @dp.message(F.text == "Привет")
